@@ -84,7 +84,7 @@ type ProviderLocal = {
     signIn?: {
       path?: string;
       method?: RouterMethod;
-      headers?: { string: string };
+      headers?: { [key: string]: string };
     };
     /**
      * What method and path to call to perform the sign-out. Set to false to disable.
