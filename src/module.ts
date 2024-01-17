@@ -69,7 +69,11 @@ const defaultsByBackend: {
     },
     refreshOnlyToken: true,
     endpoints: {
-      signIn: { path: "/login", method: "post" },
+      signIn: {
+        path: "/login",
+        method: "post",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      },
       signOut: { path: "/logout", method: "post" },
       signUp: { path: "/register", method: "post" },
       getSession: { path: "/session", method: "get" },
