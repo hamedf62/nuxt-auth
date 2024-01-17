@@ -22,12 +22,12 @@ type Credentials = {
   password?: string;
 } & Record<string, any>;
 
-const signIn = async (credentials: string | Credentials | URLSearchParams | Record<string, string> | string[][] | undefined, signInOptions: SecondarySignInOptions | undefined, signInParams?: undefined) => {
+const signIn = async (credentials:Credentials, signInOptions?:SecondarySignInOptions, signInParams?:any) => {
   const nuxt = useNuxtApp()
   const config = useTypedBackendConfig(useRuntimeConfig(), 'local')
   const { path, method, headers } = config.endpoints.signIn
 
-  const response: Record<string, any> = await _fetch(nuxt, path, {
+  const response:Record<string, any> = await _fetch(nuxt, path, {
     method,
 
     body: new URLSearchParams({
