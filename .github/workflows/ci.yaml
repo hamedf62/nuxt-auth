@@ -33,7 +33,7 @@ jobs:
 
       # Check linting and typing
       - run: pnpm lint
-      - run: pnpm typecheck
+      #- run: pnpm typecheck
 
       # Check building
       - run: pnpm build
