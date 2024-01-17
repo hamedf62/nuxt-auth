@@ -87,7 +87,7 @@ type ProviderLocal = {
       headers?: { [key: string]: string };
     };
     /**
-     * What method and path to call to perform the sign-out. Set to false to disable.
+     * What-z method and path to call to perform the sign-out. Set to false to disable.
      *
      * @default { path: '/logout', method: 'post' }
      */
